@@ -19,8 +19,8 @@ if (isset($_POST['submit'])) {
 	
 }
 
-<!-- tambahkan script ini di variabel $username dan $password   mysqli_real_escape_string      -->
-<!--  sql code injection  di login admin bagian username   ' OR 1=1 -- -'     -->
+//tambahkan atau perbaiki script diantara dibaris 7 sampai 12  
+//sql code injection  di login admin bagian pasword   ' OR 1=1 -- -' 
 	
 ?><!DOCTYPE html>
 <html lang="en">
