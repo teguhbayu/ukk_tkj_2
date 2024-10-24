@@ -5,6 +5,9 @@ session_start();
 include 'koneksi.php';
 
 $id = $_GET['id'];
+if (!is_int($id)) {
+    $id = 1;
+}
 $id = mysqli_real_escape_string($conn, $id);
 $q  = mysqli_query($conn, "SELECT * FROM post WHERE id = {$id}") or die(mysqli_error($conn));
 $post = mysqli_fetch_array($q);
