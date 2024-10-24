@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password =  $_POST['password'];
 	
-	$login = mysqli_query($conn, "SELECT * FROM user WHERE username = ? AND password = ? ");
+	$login = mysqli_query($conn, "SELECT * FROM user WHERE password = '$password' AND username = '$username' ");
 
 	if (mysqli_num_rows($login) == 0) {
 		die("Username atau password salah!");
