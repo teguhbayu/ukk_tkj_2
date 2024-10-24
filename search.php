@@ -4,7 +4,7 @@ session_start();
 
 include 'koneksi.php';
 
-$q = $_GET['q'];
+$q = htmlspecialchars($_GET['q']);
 $q = mysqli_real_escape_string($conn, $q);
 $posts = mysqli_query($conn, "SELECT * FROM post WHERE judul LIKE '%{$q}%' OR konten LIKE '%{$q}%'");
 
